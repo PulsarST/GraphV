@@ -1,0 +1,8 @@
+{
+    "graphs": [
+        {"id": 1, "graph_type": "red", "relatives": [2, 4]},
+        {"id": 2, "graph_type": "blue", "relatives": [2, 4]},
+        {"id": 3, "graph_type": "green", "relatives": [2, 4]},
+        {"id": 4, "graph_type": "blue", "relatives": [2, 4]}
+    ]
+}
