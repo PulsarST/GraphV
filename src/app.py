@@ -6,6 +6,11 @@ import pygame
 @final
 class App:
     def __init__(self, width: int, height: int, title: str = "TITLE") -> None:
+        """
+        initialize a class and creates a windows
+        the width and height provides an width and height of window
+        the title provides an caption of window
+        """
         pygame.init()
         self.__display = pygame.display.set_mode((width, height))
         pygame.display.set_caption(title=title)
@@ -37,8 +42,13 @@ class App:
             self.__draw()
 
             pygame.display.flip()
+            self.clock.tick(60)
 
         self.__close()
+
+    @property
+    def clock(self) -> pygame.time.Clock:
+        return self.__clock
 
     @property
     def running(self) -> bool:
