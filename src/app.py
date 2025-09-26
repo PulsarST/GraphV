@@ -1,6 +1,10 @@
+import json
 import sys
 from typing import final
 import pygame
+
+from graph import GraphList
+from models.model import GraphListModel
 
 
 @final
@@ -17,11 +21,16 @@ class App:
         self.__clock = pygame.time.Clock()
         self.__running = True
 
+        with open(file="./data/graphs.json", mode="r", encoding="utf-8") as file:
+            data = json.load(file)
+        graph_list_model = GraphListModel.model_validate(data)
+        self.graph_list = GraphList(graph_list_model)
+
     def __update(self) -> None:
         pass
 
     def __draw(self) -> None:
-        pass
+        self.graph_list.draw(self.display)
 
     def __close(self) -> None:
         pygame.quit()

@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class GraphType(Enum, str):
-    RED = "red"
-    GREE = "green"
-    BLUE = "blue"
+class GraphType(str, Enum):
+    RED = "RED"
+    GREEN = "GREEN"
+    BLUE = "BLUE"

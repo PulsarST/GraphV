@@ -1,8 +1,19 @@
 {
-    "graphs": [
-        {"id": 1, "graph_type": "red", "relatives": [2, 4]},
-        {"id": 2, "graph_type": "blue", "relatives": [2, 4]},
-        {"id": 3, "graph_type": "green", "relatives": [2, 4]},
-        {"id": 4, "graph_type": "blue", "relatives": [2, 4]}
-    ]
+  "models": [
+    {
+      "id": 1,
+      "graph_type": "GREEN",
+      "relatives": [2, 3]
+    },
+    {
+      "id": 2,
+      "graph_type": "BLUE",
+      "relatives": [1]
+    },
+    {
+      "id": 3,
+      "graph_type": "RED",
+      "relatives": [1]
+    }
+  ]
 }
